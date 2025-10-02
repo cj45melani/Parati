@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: url('fondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .slide {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 700px;
+      max-height: 90vh; 
+      overflow-y: auto; /* scroll si el texto es largo */
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 5px 0;
+      line-height: 1.5;
+    }
+
+    /* Imágenes centradas y proporcionadas */
+    img {
+      display: block;
+      margin: 10px auto; /* centrado */
+      max-width: 100%;   /* no sobrepasa el ancho del slide */
+      max-height: 300px; /* altura moderada */
+      width: auto;       /* ancho proporcional */
+      height: auto;      /* mantiene proporción */
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Ajuste solo para la slide 4 */
+    .slide:nth-child(4) img {
+      max-height: 200px; /* altura moderada para permitir scroll */
+      display: block;
+      margin: 10px auto; /* centrado */
+      width: auto;
+      height: auto;
+    }
+
+    .box-text p {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      border-radius: 12px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+      word-wrap: break-word;
+      margin: 10px 0;
+    }
+
+    /* Colores personalizados por slide */
+    .slide:nth-child(1) h1, .slide:nth-child(1) p { color: #ffebcd; }
+    .slide:nth-child(2) h1, .slide:nth-child(2) p { color: #ffc0cb; }
+    .slide:nth-child(3) h1, .slide:nth-child(3) p { color: #d8bfd8; }
+    .slide:nth-child(4) h1, .slide:nth-child(4) p { color: #87cefa; }
+    .slide:nth-child(5) h1, .slide:nth-child(5) p { color: #ffdd57; }
+    .slide:nth-child(6) h1, .slide:nth-child(6) p { color: #40e0d0; }
+
+    /* Letras flotando */
+    .floating-letter {
+      position: absolute;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.9);
+      pointer-events: none;
+      animation: floatText 3s linear forwards;
+      white-space: nowrap;
+    }
+
+    @keyframes floatText {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-200px) rotate(15deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body onclick="handleClick()">
+
+  <!-- Slides -->
+  <div class="slide active">
+    <h1>Hola 💕</h1>
+    <p>Solo quería decirte algo...</p>
+    <div class="box-text">
+      <img src="imagen1.jpg" alt="Imagen 1">
+      <p>Amor... no te asustes xd, te digo asi porque esa es la manera en que te recuerdo y no se si sera asi por siempre pero lo es ahora y mañana también..</p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <h1>Tu sonrisa</h1>
+    <p>Es una de las cosas que mas me encanta ver... ✨</p>
+    <div class="box-text">
+      <img src="imagen2.jpg" alt="Imagen 2">
+      <p>Egoístamente quisiera que solo fuera para mi, pero que no seas feliz seria doloroso para mi, por eso espero poder verla, por que sé cuanto podria costarte por momento, hubiera querido hacer mucho mas por ti, quisiera poder quitar todo lo malo de tu vida y que pudieras ser feliz realmente, sin ningún peso en corazón...</p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <h1>Tu alma...</h1>
+    <p>Es capaz de entregar tanto.. 🎶</p>
+    <div class="box-text">
+      <img src="imagen3.jpg" alt="Imagen 3">
+      <p>Ese corazón tranquilo, ese corazón herido, ese que se esconde de sus propias emociones, que las evita, por miedo, por miedo, por muchas veces sentir...que no vale....que no es suficiente, ese corazón lleno de miedo sigue siendo perfecto para mi </p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <h1>Siempre contigo</h1>
+    <p>No puedo evitarlo...tampoco quiero hacerlo...siento que podria arrepentirme..</p>
+    <div class="box-text">
+      <img src="imagen4.jpg" alt="Imagen 4">
+      <p>Quizas piensas no sirves, pero si lo haces, todo el tiempo, con tus amigos, con tu mamá, lo hiciste conmigo. El camino podría ser largo o corto, eso no es importante, si no como lo vives. No te preocupes si a veces no sabes que hacer, eso no solo te pasa a ti, no es malo, yo lo vivo muchas veces, lo importante es seguir, no todos los dias seran buenos, no todos los dias seran felices y eso hace que valoremos mas esos momentos de eso se trata, asi que no te frustres por no poder lograr las cosas rapido.</p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <h1>Tu mirada....</h1>
+    <p>Transmite tanto... 🌠</p>
+    <div class="box-text">
+      <img src="imagen5.jpg" alt="Imagen 5">
+      <p>La capacidad de poder conectar con una persona, no es muy común, mirar el alma, transmitir palabras, sentimientos. Sentir tu mirada me hacia sentir segura, me hacia sentir tu amor, gracias por que a pesar de todo, eso fue una cura a mi corazón. La misma paz que siento cuando miro la luna, espero que tu tambiém puedas setirla algún dia. Anthony Sonríe</p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <h1>Recuerda...</h1>
+    <p> Que puedes contar conmigo....💫</p>
+    <div class="box-text">
+      <img src="imagen6.jpg" alt="Imagen 6">
+      <p>No quiero que te sientas mal tampoco, porque mi corazón esta tranquilo, pase por muchos procesos y no puedo cambiar mi escencia, siempre elijo desde el corazón, porque el tiempo no regresa y quiero disfrutar el poco tiempo que me quede, sentir..es lindo, puede ser doloroso, pero asi pasa, de una madre a un hijo, de un padre a un hijo...puede que no todos tengan esa capacidad...y no tenerla no esta mal...muchas veces es el temor a sentir o las malas experiencias que crean un caparazón de hielo. Puede que no me quieras cerca, lo entiendo, puede que no quieras hablar conmigo, pueden ser demasiadas cosas...pero eso no va cambiar lo que siento, vivire con esto lo que tenga que vivir, puede que duela, pero no duele porque sea malo, duele por que no esta...y si, pudes sentir dolor y ser feliz al mismo tiempo, yo sentí el dolor en la piel y no me lo causaste tu, asi que no te sientas mal...las cosas que pasamos ya pasaron. Eres una de las personas que me demostro sinceridad en su momento y te guarde asi. No importa lo que pase en el futuro, el amor que de diste, es fuerte, para una persona como yo, que estaba en la oscuridad. Sonrie y se mejor cada dia. si?</p>
+    </div>
+  </div>
+
+  <!-- Música de fondo -->
+  <audio id="music" src="tu_cancion.mp3" loop></audio>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    function showSlide(i) {
+      slides.forEach(s => s.classList.remove('active'));
+      slides[i].classList.add('active');
+    }
+
+    // Cambiar slide cada 20 segundos
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 20000);
+
+    let musicStarted = false;
+
+    function handleClick() {
+      const music = document.getElementById('music');
+      if (!musicStarted) {
+        music.play();
+        musicStarted = true;
+      }
+
+      const name = "Anthony";
+      const letter = document.createElement('div');
+      letter.className = 'floating-letter';
+      letter.textContent = name; // Mostrar nombre completo
+      letter.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+      letter.style.top = Math.random() * (window.innerHeight - 30) + 'px';
+      letter.style.fontSize = 20 + Math.random() * 30 + 'px';
+      document.body.appendChild(letter);
+      setTimeout(() => letter.remove(), 3000);
+    }
+  </script>
+
+</body>
+</html>
